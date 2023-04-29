@@ -12,7 +12,7 @@ public class App {
 
         HelloWorld bean1 =
                 (HelloWorld) applicationContext.getBean("helloworld");
-        Cat beanCat = applicationContext.getBean("cat", Cat.class);
+        Cat beanCat = (Cat) applicationContext.getBean("cat");
         Cat beanCat1 = applicationContext.getBean("cat", Cat.class);
 
         System.out.println("Сравнение бинов helloworld : " + (bean == bean1));
